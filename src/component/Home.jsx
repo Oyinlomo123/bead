@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from '../reusable/hero'
+import Hero from './Hero'
 import Features from '../reusable/features'
 import Product from '../reusable/Product'
 
