@@ -17,7 +17,7 @@ const Nav = () => {
         </Link>
 
         {/* Navigation Links */}
-        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+        <ul className={`nav-links ${menuOpen ? "open" : "close"}`}>
           <li><Link to="/">HOME</Link></li>
           <li><Link to="/shop">SHOP</Link></li>
           <li><Link to="/services">SERVICES</Link></li>

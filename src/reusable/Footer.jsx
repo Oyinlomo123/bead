@@ -13,7 +13,7 @@ const Footer = () => {
         <li><Link to="/contact">CONTACT</Link></li>
       </ul>
       <Link to="#" className="social-icon">
-        <img src="/instagram-icon.png" alt="Instagram" />
+      Instagram
       </Link>
     </nav>
 
@@ -40,9 +40,9 @@ const Footer = () => {
 
         <div className="footer-section">
           <h3>Contact Us</h3>
-          <p>Phone: (+234) 9153271701</p>
+          <p>Phone: (+234) 8131225692</p>
           <p>Need help or have a question?</p>
-          <p>Contact us at: <a href="mailto:symplymj@gmail.com">bead@gmail.com</a></p>
+          <p>Contact us at: <a href="mailto:Tobiojuolape23@gmail.com">Tobiojuolape23@gmail.com</a></p>
         </div>
       </div>
 
@@ -50,7 +50,7 @@ const Footer = () => {
         <p>Copyright © 2025 everythingbytiwa.</p>
         <div className="payment-icons">
           <span>VISA</span>
-          <span>AMERICAN EXPRESS</span>
+          <span>MASTER</span>
         </div>
       </div>
     </footer>
