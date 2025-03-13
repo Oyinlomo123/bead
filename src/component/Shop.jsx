@@ -98,7 +98,7 @@ const Shop = () => {
       <div className="shop-main">
         <input type="text" placeholder="Search products..." className="search-bar" />
         <div className="sort-bar">
-          <span>SHOWING 1-9 OF 52 RESULTS</span>
+          <span>SHOWING 1-9 OF 20 RESULTS</span>
           <select>
             <option>Default sorting</option>
           </select>
