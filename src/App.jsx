@@ -1,9 +1,7 @@
 import Cart from './component/Cart';
 import Home from './component/Home'
-import React, { useState, useEffect } from "react";
 import Nav from  './component/Nav'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Product from './reusable/Product';
 import BeadProduct from './component/BeadProduct';
 import Shop from "./component/Shop";
 import Footer from './reusable/Footer';
