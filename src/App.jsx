@@ -12,7 +12,6 @@ import Aboutus from './component/Aboutus';
 
 function App() {
   
-
   return (
     <>
       <CartProvider>
