@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaSearch, FaUser, FaShoppingBag } from "react-icons/fa";
+import { FaSearch, FaUser, FaShoppingCart } from "react-icons/fa";
 import logo from "../assets/logo.jpeg";
+import { useContext } from "react";
+import { CartContext } from "../component/CartContext";
 
 import { useNavigate } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({ cartCount }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { cart } = useContext(CartContext); // ✅ Get cart from context
 
+  // Ensure cart is defined before using length
+  const cartItemCount = cart ? cart.length : 0;
   return (
-    <nav className="nav">
+    <nav className="nav" >
       <div className="nav-container">
         {/* Logo */}
         <Link to="/" className="logo">
@@ -18,19 +23,21 @@ const Nav = () => {
 
         {/* Navigation Links */}
         <ul className={`nav-links ${menuOpen ? "open" : "close"}`}>
-          <li><Link to="/">HOME</Link></li>
-          <li><Link to="/shop">SHOP</Link></li>
-          <li><Link to="/services">SERVICES</Link></li>
-          <li><Link to="/about">ABOUT US</Link></li>
-          <li><Link to="/contact">CONTACT</Link></li>
+          <li><Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link></li>
+          <li><Link to="/shop" onClick={() => setMenuOpen(false)}>SHOP</Link></li>
+          <li><Link to="/services" onClick={() => setMenuOpen(false)}>SERVICES</Link></li>
+          <li><Link to="/about" onClick={() => setMenuOpen(false)}>ABOUT US</Link></li>
+          <li><Link to="/contact" onClick={() => setMenuOpen(false)}>CONTACT</Link></li>
         </ul>
 
         {/* Icons */}
         <div className="nav-icons">
           <FaSearch className="icon" />
           <FaUser className="icon" />
-         <Link to="/Cart"><FaShoppingBag className="icon" /></Link>
-         
+          <Link to="/cart" className="cart-icon">
+        <FaShoppingCart className="icon" />
+        {cartItemCount > 0 && <span className="cart-count">{cartItemCount}</span>}
+      </Link>
         </div>
 
         {/* Hamburger Button */}

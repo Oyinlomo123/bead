@@ -118,9 +118,9 @@
 }
 
 .cart-product img {
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
   border-radius: 5px;
 }
 
@@ -228,7 +228,7 @@ h2 {
 .product-card img {
   width: 100%;
   max-height: 200px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 8px;
 }
 
@@ -337,6 +337,33 @@ p {
 .icon:hover {
   color: #555;
 }
+.cart-icon {
+  position: relative;
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon:hover {
+  color: #ff5733; /* Change color on hover */
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -13px;
+  background-color: rgba(19, 116, 62, 0.986);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 50%;
+  padding: 4px 4px;
+  min-width: 20px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
 
 /* Hamburger Button (Hidden by Default) */
 .hamburger {
@@ -430,9 +457,26 @@ p {
 }
 
 /* Social Icon */
-.social-icon img {
-  width: 24px;
-  height: 24px;
+.instagram-icon {
+  font-size: 24px;
+  color: #e4405f; /* Instagram pinkish-red */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding-right: 10px;
+}
+
+.instagram-icon:hover {
+  color: #bc2a8d; /* Darker Instagram shade */
+}
+.tiktok-icon {
+  font-size: 24px;
+  color: #000; /* TikTok's black theme */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.tiktok-icon:hover {
+  color: #69c9d0; /* TikTok's cyan-blue color */
 }
 
 
@@ -753,7 +797,7 @@ p {
 }
 
 .product-card img {
-  width: 100%;
+  width:100%;
   height: auto;
   object-fit:cover;
   border-radius: 8px;
@@ -821,6 +865,136 @@ button:hover {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+
+
+/*aboutus*/
+.about-section {
+  background-color: #eee; /* Light gray background */
+  text-align: center;
+  padding: 150px 0;
+  margin-top: 80px;
+}
+
+.about-title {
+  font-size: 76px;
+  font-weight: bold;
+  color: #111; /* Dark color for contrast */
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  gap: 40px;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.about-text h2 span {
+  display: inline-block;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.about-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.about-role {
+  font-size: 14px;
+  color: #777;
+}
+.newsletter-container {
+  background:black;
+  background-size: cover;
+  padding: 150px 0;
+  text-align: center;
+  color: white; /* Ensure text is visible */
+  margin-top: 5rem;
+}
+
+
+.newsletter-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.newsletter-form button {
+  background: #526d56;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  transition: background 0.3s;
+}
+
+.newsletter-form button:hover {
+  background: #495c3d62;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 300px;
+  }
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 1024px) {

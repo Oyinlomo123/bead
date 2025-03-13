@@ -16,10 +16,19 @@ const BeadProduct = () => {
 
   const handleCartClick = () => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const updatedCart = [...cart, { ...product, quantity: 1 }];
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-    navigate("/cart");
+    
+    // Check if the product is already in the cart
+    const productExists = cart.find((item) => item.id === product.id);
+  
+    if (productExists) {
+      alert("Product is already in the cart!");
+    } else {
+      const updatedCart = [...cart, { ...product, quantity: 1 }];
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      alert("Product added to cart!");
+    }
   };
+  
 
   return (
     <div className="product-page">

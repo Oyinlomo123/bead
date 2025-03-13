@@ -20,10 +20,10 @@ import bead16 from "../assets/bead16.jpg"
 
 const products = [
   { id: 1, name: "Bag Tutu – Brown", price: 40000, category: "Beaded Bags", image: bead16},
-  { id: 2, name: "Olaedo – Gold x Red", price: 90000, category: "Beaded Bags", image: bead1 },
+  { id: 2, name: "Gold x Red", price: 90000, category: "Beaded Bags", image: bead1 },
   { id: 3, name: "Olaedo", price: 75000, category: "Beaded Bags", image: bead2 },
-  { id: 4, name: "Bag Tutu – Brown", price: 40000, category: "Beaded Bags", image: bead3 },
-  { id: 5, name: "Olaedo – Gold x Red", price: 90000, category: "Beaded Bags", image: bead4 },
+  { id: 4, name: "Bag – Brown", price: 40000, category: "Beaded Bags", image: bead3 },
+  { id: 5, name: "Olaedo  x Red", price: 90000, category: "Beaded Bags", image: bead4 },
   { id: 6, name: "Olaedo", price: 75000, category: "Beaded Bags", image: bead5 },
   { id: 7, name: "Olaedo", price: 75000, category: "Beaded Bags", image: bead6},
   { id: 8, name: "Bag Tutu – Brown", price: 40000, category: "Beaded Bags", image: bead7 },
@@ -38,9 +38,9 @@ const products = [
 
 const ITEMS_PER_PAGE = 9;
 const popularProducts = [
-  { id: 4, name: "Bag Tutu ~ Pink", price: 40000, image: bead3 },
-  { id: 5, name: "Flower Bucket Bag ~ Choco Brown", price: 38500, image: bead5 },
-  { id: 6, name: "Ifunaya ~ Pink x Red", price: 60000, image: bead20},
+  { id: 15, name: "Bag Tutu ~ Pink", price: 40000, image: bead3 },
+  { id: 16, name: "Flower Bucket Bag ~ Choco Brown", price: 38500, image: bead5 },
+  { id: 17, name: "Ifunaya ~ Pink x Red", price: 60000, image: bead20},
 ];
 
 const categories = ["Beaded Bags (20)", "Beaded Earrings (1)", "Neck Beads (1)"];
@@ -69,6 +69,8 @@ const Shop = () => {
       localStorage.setItem("cart", JSON.stringify(updatedCart));
     }
   };
+ 
+
   return (
     <div className="shop-container">
       {/* Sidebar */}

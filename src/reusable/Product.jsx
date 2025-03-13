@@ -6,7 +6,7 @@ import bead16 from "../assets/bead16.jpg"
 
 const products = [
   { id: 1, name: "Beaded Bracelet", description: "Handcrafted natural bead bracelet.", price: 29999, image: bead13 },
-  { id: 2, name: "Wooden Necklace", description: "Elegant wooden bead necklace.", price: 49999, image: bead16 },
+  { id: 4, name: "Wooden Necklace", description: "Elegant wooden bead necklace.", price: 49999, image: bead16 },
   { id: 3, name: "Gemstone Ring", description: "Stylish ring with natural gemstones.", price: 19999, image: bead20 },
 ];
 
@@ -26,6 +26,7 @@ const Product = () => {
       setCart(updatedCart);
       localStorage.setItem("cart", JSON.stringify(updatedCart));
     }
+    
   };
 
 

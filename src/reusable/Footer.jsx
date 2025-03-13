@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaInstagram, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -12,9 +13,24 @@ const Footer = () => {
         <li><Link to="/about">ABOUT US</Link></li>
         <li><Link to="/contact">CONTACT</Link></li>
       </ul>
-      <Link to="#" className="social-icon">
-      Instagram
-      </Link>
+      <span>
+      <a
+      href="https://www.instagram.com/Tewathebeadmaker"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="instagram-icon"
+    >
+      <FaInstagram />
+    </a>
+    <a
+      href="https://www.tiktok.com/Tewathebeadmaker"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="tiktok-icon"
+    >
+      <FaTiktok />
+    </a>
+    </span>
     </nav>
 
       <div className="footer-content">
