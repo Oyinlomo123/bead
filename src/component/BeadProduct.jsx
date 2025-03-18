@@ -37,7 +37,6 @@ const BeadProduct = () => {
           <img src={product.image} alt={product.name} />
         </div>
         <div className="product-details">
-          <span className="pay-on-delivery">Pay on Delivery</span>
           <h2 className="product-title">{product.name}</h2>
           <p className="product-price">
             ₦{product.price.toLocaleString()} <span className="old-price">₦{(product.price / (1 - product.discount / 100)).toFixed(2)}</span>

@@ -11,7 +11,7 @@ import Aboutus from './component/Aboutus';
 function App() {
   
   return (
-    <>
+    <div className='app'>
       <CartProvider>
         <Router>
         <Nav />
@@ -25,7 +25,7 @@ function App() {
           <Footer/>
         </Router>
       </CartProvider>
-    </>
+    </div>
   )
 }
 

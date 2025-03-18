@@ -21,8 +21,8 @@ import bead16 from "../assets/bead16.jpg"
 const products = [
   { id: 1, name: "Bag Tutu – Brown", price: 40000, category: "Beaded Bags", image: bead16},
   { id: 2, name: "Gold x Red", price: 90000, category: "Beaded Bags", image: bead1 },
-  { id: 3, name: "Olaedo", price: 75000, category: "Beaded Bags", image: bead2 },
-  { id: 4, name: "Bag – Brown", price: 40000, category: "Beaded Bags", image: bead3 },
+  { id: 3, name: "Spiky two color bag", price: 90000, category: "Beaded Bags", image: bead2 },
+  { id: 4, name: "Bag – Brown", price: 40000,  category: "Beaded Bags", image: bead3 },
   { id: 5, name: "Olaedo  x Red", price: 90000, category: "Beaded Bags", image: bead4 },
   { id: 6, name: "Olaedo", price: 75000, category: "Beaded Bags", image: bead5 },
   { id: 7, name: "Olaedo", price: 75000, category: "Beaded Bags", image: bead6},
@@ -38,7 +38,7 @@ const products = [
 
 const ITEMS_PER_PAGE = 9;
 const popularProducts = [
-  { id: 15, name: "Bag Tutu ~ Pink", price: 40000, image: bead3 },
+  { id: 15, name: "Bag Tutu ~ Pink", dollar: 40, price: 40000, image: bead3 },
   { id: 16, name: "Flower Bucket Bag ~ Choco Brown", price: 38500, image: bead5 },
   { id: 17, name: "Ifunaya ~ Pink x Red", price: 60000, image: bead20},
 ];
@@ -81,7 +81,8 @@ const Shop = () => {
             <img src={product.image} alt={product.name} onClick={() => navigate("/bead", { state: { product } })} />
             <div>
               <p>{product.name}</p>
-              <span>₦{product.price.toLocaleString()}</span>
+              <span>₦{product.price.toLocaleString()}</span> 
+              <span>(${product.dollar})</span>
             </div>
           </div>
         ))}
@@ -104,10 +105,10 @@ const Shop = () => {
           </select>
         </div>
 
-        <div className="product-grid">
+        <div className="product-grid"  >
         {paginatedProducts.map((product) => (
-          <div key={product.id} className="product-card">
-           <img src={product.image} alt={product.name} onClick={() => navigate("/bead", { state: { product } })} />
+          <div key={product.id} className="product-card" onClick={() => navigate("/bead", { state: { product } })}>
+           <img src={product.image} alt={product.name}  />
             <h4>{product.name}</h4>
             <p className="price">₦{product.price.toLocaleString()}</p>
             <p className="category">{product.category}</p>

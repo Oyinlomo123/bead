@@ -25,7 +25,6 @@ const Nav = ({ cartCount }) => {
         <ul className={`nav-links ${menuOpen ? "open" : "close"}`}>
           <li><Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link></li>
           <li><Link to="/shop" onClick={() => setMenuOpen(false)}>SHOP</Link></li>
-          <li><Link to="/services" onClick={() => setMenuOpen(false)}>SERVICES</Link></li>
           <li><Link to="/about" onClick={() => setMenuOpen(false)}>ABOUT US</Link></li>
           <li><Link to="/contact" onClick={() => setMenuOpen(false)}>CONTACT</Link></li>
         </ul>
@@ -38,12 +37,13 @@ const Nav = ({ cartCount }) => {
         <FaShoppingCart className="icon" />
         {cartItemCount > 0 && <span className="cart-count">{cartItemCount}</span>}
       </Link>
-        </div>
-
-        {/* Hamburger Button */}
-        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+      {/* Hamburger Button */}
+      <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </button>
+        </div>
+
+        
       </div>
     </nav>
   );
