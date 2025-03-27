@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import imgs from "../assets/imgs.jpeg"; 
 import bead1 from "../assets/bead1.png"
 import bead2 from "../assets/bead2.jpg"
+import beads2 from "../assets/beads2.jpeg"
 import bead3 from "../assets/bead3.jpg"
 import bead4 from "../assets/bead4.jpg"
 import bead5 from "../assets/bead5.jpg"
@@ -15,32 +16,46 @@ import bead11 from "../assets/bead11.jpg"
 import bead12 from "../assets/bead12.jpg"
 import bead13 from "../assets/bead13.jpg"
 import bead20 from "../assets/bead20.jpg"
+import bead14 from "../assets/bead14.jpg"
+import bead15 from "../assets/bead15.jpg"
+import bead28 from "../assets/bead28.jpeg"
+import bead25 from "../assets/bead25.jpeg"
+import bead24 from "../assets/bead24.jpeg"
+import beads24 from "../assets/beads24.jpeg"
 import bead16 from "../assets/bead16.jpg"
+import bead17 from "../assets/bead17.jpg"
+import bead18 from "../assets/bead18.jpg"
+import bead19 from "../assets/bead19.jpg"
 
 
 const products = [
-  { id: 1, name: "Bag Tutu – Brown", price: 40000, category: "Beaded Bags", image: bead16},
-  { id: 2, name: "Gold x Red", price: 90000, category: "Beaded Bags", image: bead1 },
-  { id: 3, name: "Spiky two color bag", price: 90000, category: "Beaded Bags", image: bead2 },
-  { id: 4, name: "Bag – Brown", price: 40000,  category: "Beaded Bags", image: bead3 },
-  { id: 5, name: "Olaedo  x Red", price: 90000, category: "Beaded Bags", image: bead4 },
-  { id: 6, name: "Olaedo", price: 75000, category: "Beaded Bags", image: bead5 },
-  { id: 7, name: "Olaedo", price: 75000, category: "Beaded Bags", image: bead6},
-  { id: 8, name: "Bag Tutu – Brown", price: 40000, category: "Beaded Bags", image: bead7 },
-  { id: 9, name: "Olaedo – Gold x Red", price: 90000, category: "Beaded Bags", image: bead8 },
-  { id: 10, name: "Olaedo", price: 75000, category: "Beaded Bags", image: bead9},
-  { id: 11, name: "Olaedo", price: 75000, category: "Beaded Bags", image: bead10},
-  { id: 12, name: "Bag Tutu – Brown", price: 40000, category: "Beaded Bags", image: bead11 },
-  { id: 13, name: "Olaedo – Gold x Red", price: 90000, category: "Beaded Bags", image: bead12 },
-  { id: 14, name: "Olaedo", price: 75000, category: "Beaded Bags", image: bead13 },
-
+  { id: 1, name: "Spiky two color bag",description:"lorem bbbbbbbbbbbbbbbbbbbbbbbbbbbbb", price: 90000, dollar: 85, category: "Beaded Bags", images: [bead1]},
+  { id: 2, name: "Tay Beaded Bag",description:"pure Acrylic beads coupled with acrylic tear drop beads", price: 100000, dollar: 100, category: "Beaded Bags", images: [bead2, beads2] },
+  { id: 3, name: "Doyin  Beaded Bag",description:"pure Acrylic beads coupled with acrylic tear drop beads ", price: 110000, dollar: 110, category: "Beaded Bags", images: [bead3] },
+  { id: 4, name: "SHE in Black beaded bag ",description:"pure crystal gemstone incorporated with multiple gem stone beads", price: 130000, dollar: 130, category: "Beaded Bags", images: [bead4]},
+  { id: 5, name: "SHE beaded bag",description:" pure crystal gemstone incorporated with multiple gem stone beads", price: 130000, dollar: 130, category: "Beaded Bags", images: [bead5, bead6, bead28] },
+  { id: 6, name: "Lovie beaded bag", description:"crystal gem stones coupled with round crystal beads ,with pure crystal gem stones beaded strings ", price: 70000, dollar: 70, category: "Beaded Bags", images: [bead25] },
+  { id: 7, name: "Maisha bag", description:"lorem bbbbbbbbbbbbbbbbbbbbbbbbbbbbb", price: 85000, dollar: 85, category: "Beaded Bags", images: [bead7] },
+  { id: 8, name: "Berry Bag", description:"Cherry beads with crystal beads", price: 75000, dollar: 75, category: "Beaded Bags", images: [bead8] },
+  { id: 9, name: "CEO", description:" plastic beads ,with inner linen pocket and outer beaded pocket ", price: 150000, dollar: 150, category: "Beaded Bags", images: [bead9, bead10] },
+  { id: 11, name: "Silver Aluminum", description:" Aluminum beads used comes with a beaded handle strap", price: 40000, dollar: 40, category: "Beaded Bags", images: [bead11] },
+  { id: 12, name: "Bag Tutu – Brown", description:"lorem bbbbbbbbbbbbbbbbbbbbbbbbbbbbb", price: 40000, dollar: 85, category: "Beaded Bags", images: [bead12] },
+  { id: 13, name: "Olaedo – Gold x Red", description:"lorem bbbbbbbbbbbbbbbbbbbbbbbbbbbbb", price: 90000, dollar: 85, category: "Beaded Bags", images: [bead13] },
+  { id: 14, name: "Olaedo", description:"lorem bbbbbbbbbbbbbbbbbbbbbbbbbbbbb", price: 75000, dollar: 85, category: "Beaded Bags", images: [bead14] },
+  { id: 15, name: "CURR’s Beaded", description:"lorem bbbbbbbbbbbbbbbbbbbbbbbbbbbbb", price: 75000, dollar: 85, category: "Beaded Bags", images: [beads24, bead24] },
+  { id: 16, name: "Olaedo", description:"lorem bbbbbbbbbbbbbbbbbbbbbbbbbbbbb", price: 75000, dollar: 85, category: "Beaded Bags", images: [bead16] },
+  { id: 17, name: "Olaedo", description:"lorem bbbbbbbbbbbbbbbbbbbbbbbbbbbbb", price: 75000, dollar: 85, category: "Beaded Bags", images: [bead15] },
+  { id: 18, name: "Olaedo", description:"lorem bbbbbbbbbbbbbbbbbbbbbbbbbbbbb", price: 75000, dollar: 85, category: "Beaded Bags", images: [bead17] },
+  { id: 19, name: "Olaedo", description:"lorem bbbbbbbbbbbbbbbbbbbbbbbbbbbbb", price: 75000, dollar: 85, category: "Beaded Bags", images: [bead18] },
+  { id: 16, name: "Olaedo", description:"lorem bbbbbbbbbbbbbbbbbbbbbbbbbbbbb", price: 75000, dollar: 85, category: "Beaded Bags", images: [bead19] },
+  { id: 16, name: "Olaedo", description:"lorem bbbbbbbbbbbbbbbbbbbbbbbbbbbbb", price: 75000, dollar: 85, category: "Beaded Bags", images: [bead19] },
 ];
 
 const ITEMS_PER_PAGE = 9;
 const popularProducts = [
-  { id: 15, name: "Bag Tutu ~ Pink", dollar: 40, price: 40000, image: bead3 },
-  { id: 16, name: "Flower Bucket Bag ~ Choco Brown", price: 38500, image: bead5 },
-  { id: 17, name: "Ifunaya ~ Pink x Red", price: 60000, image: bead20},
+  { id: 15, name: "3 tone color spiky beaded bag", dollar: 120, price: 120000, images: [ bead14] },
+  { id: 16, name: "Stoned beaded bag in gold",dollar: 130, price: 130000, images:[  bead10] },
+  { id: 17, name: "Ifunaya ~ Pink x Red", price: 60000, dollar: 85,  images: [bead20, bead11]},
 ];
 
 const categories = ["Beaded Bags (20)", "Beaded Earrings (1)", "Neck Beads (1)"];
@@ -67,76 +82,84 @@ const Shop = () => {
       const updatedCart = [...cart, { ...product, quantity: 1 }];
       setCart(updatedCart);
       localStorage.setItem("cart", JSON.stringify(updatedCart));
+      alert("Product is already in the cart!");
+    }else {
+      const updatedCart = [...cart, { ...product, quantity: 1 }];
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      alert("Product added to cart!");
     }
   };
  
 
   return (
-    <div className="shop-container">
-      {/* Sidebar */}
-      <aside className="shop-sidebar">
-        <h3>Popular Products</h3>
-        {popularProducts.map((product) => (
-          <div key={product.id} className="sidebar-product">
-            <img src={product.image} alt={product.name} onClick={() => navigate("/bead", { state: { product } })} />
-            <div>
-              <p>{product.name}</p>
-              <span>₦{product.price.toLocaleString()}</span> 
-              <span>(${product.dollar})</span>
+    <>
+      <section className="about-section">
+            <h1 className="about-title">shop</h1>
+      </section>
+      <div className="shop-container">
+        {/* Sidebar */}
+        <aside className="shop-sidebar">
+          <h3>Popular Products</h3>
+          {popularProducts.map((product) => (
+            <div key={product.id} className="sidebar-product">
+              <img src={Array.isArray(product.images) ? product.images[0] : product.images} alt={product.name} onClick={() => navigate("/bead", { state: { product } })} />
+              <div>
+                <p>{product.name}</p>
+                <span>₦{product.price.toLocaleString()}</span> c
+              </div>
             </div>
-          </div>
-        ))}
-
-        <h3>Categories</h3>
-        <ul>
-          {categories.map((category, index) => (
-            <li key={index}>{category}</li>
           ))}
-        </ul>
-      </aside>
 
-      {/* Main Content */}
-      <div className="shop-main">
-        <input type="text" placeholder="Search products..." className="search-bar" />
-        <div className="sort-bar">
-          <span>SHOWING 1-9 OF 20 RESULTS</span>
-          <select>
-            <option>Default sorting</option>
-          </select>
-        </div>
+          <h3>Categories</h3>
+          <ul>
+            {categories.map((category, index) => (
+              <li key={index}>{category}</li>
+            ))}
+          </ul>
+        </aside>
 
-        <div className="product-grid"  >
-        {paginatedProducts.map((product) => (
-          <div key={product.id} className="product-card" onClick={() => navigate("/bead", { state: { product } })}>
-           <img src={product.image} alt={product.name}  />
-            <h4>{product.name}</h4>
-            <p className="price">₦{product.price.toLocaleString()}</p>
-            <p className="category">{product.category}</p>
-            <button onClick={() => addToCart(product)}>Add to cart</button>
+        {/* Main Content */}
+        <div className="shop-main">
+          <input type="text" placeholder="Search products..." className="search-bar" />
+          <div className="sort-bar">
+            <span>SHOWING 1-9 OF 20 RESULTS</span>
+            <select>
+              <option>Default sorting</option>
+            </select>
           </div>
-        ))}
-      </div>
 
-       {/* Pagination */}
-      <div className="pagination">
-        <button disabled={currentPage === 1} onClick={() => setCurrentPage(currentPage - 1)}>
-          &lt; Prev
-        </button>
-        {Array.from({ length: totalPages }, (_, index) => (
-          <button
-            key={index + 1}
-            className={currentPage === index + 1 ? "active" : ""}
-            onClick={() => setCurrentPage(index + 1)}
-          >
-            {index + 1}
+          <div className="product-grid">
+            {paginatedProducts.map((product) => (
+              <div key={product.id} className="product-card" >
+                <img src={Array.isArray(product.images) ? product.images[0] : product.images} alt={product.name} onClick={() => navigate("/bead", { state: { product } })}/>
+                <h4>{product.name}</h4>
+                <p className="price">₦{product.price.toLocaleString()} <span>(${product.dollar})</span></p>
+                <button onClick={(event) => addToCart(product, event)} >Add to cart</button>
+              </div>
+            ))}
+          </div>
+
+         {/* Pagination */}
+          <div className="pagination">
+          <button disabled={currentPage === 1} onClick={() => setCurrentPage(currentPage - 1)}>
+            &lt; Prev
           </button>
-        ))}
-        <button disabled={currentPage === totalPages} onClick={() => setCurrentPage(currentPage + 1)}>
-          Next &gt;
-        </button>
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index + 1}
+              className={currentPage === index + 1 ? "active" : ""}
+              onClick={() => setCurrentPage(index + 1)}
+            >
+              {index + 1}
+            </button>
+          ))}
+          <button disabled={currentPage === totalPages} onClick={() => setCurrentPage(currentPage + 1)}>
+            Next &gt;
+          </button>
+          </div>
+        </div>
       </div>
-    </div>
-      </div>
+    </>
   );
 };
 

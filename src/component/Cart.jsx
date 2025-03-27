@@ -17,7 +17,7 @@ const Cart = () => {
     setCart(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
-
+  
   const removeItem = (id) => {
     const updatedCart = cart.filter((item) => item.id !== id);
     setCart(updatedCart);
@@ -25,6 +25,8 @@ const Cart = () => {
   };
 
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  
+  const totaldollar = cart.reduce((total, item) => total + item.dollar * item.quantity, 0);
 
   return (
     <div className="cart-container">
@@ -37,19 +39,19 @@ const Cart = () => {
             <thead>
               <tr>
                 <th>Product</th>
-                <th>Quantity</th>
                 <th>Subtotal</th>
-                <th></th>
+                <th>remove</th>
               </tr>
             </thead>
             <tbody>
               {cart.map((item) => (
                 <tr key={item.id}>
                   <td className="cart-product">
-                    <img src={item.image} alt={item.name} />
+                    <img src={item.images} alt={item.name} />
                     <div>
                       <p className="product-name">{item.name}</p>
-                      <p className="product-price">₦{item.price.toLocaleString()}</p>
+                      <p className="product-price">₦{item.price.toLocaleString()}<span>$({item.dollar})</span></p>
+
                     </div>
                   </td>
                   <td className="cart-quantity">
@@ -57,7 +59,7 @@ const Cart = () => {
                     <span>{item.quantity}</span>
                     <button onClick={() => updateQuantity(item.id, 1)}>+</button>
                   </td>
-                  <td className="cart-subtotal">₦{(item.price * item.quantity).toLocaleString()}</td>
+                  <td className="cart-subtotal">₦{(item.price * item.quantity).toLocaleString()} <span>${[item.dollar * item.quantity]}</span></td>
                   <td>
                     <button className="remove-item" onClick={() => removeItem(item.id)}>🗑</button>
                   </td>
@@ -68,7 +70,7 @@ const Cart = () => {
 
           <div className="cart-summary">
             <h3>Cart Totals</h3>
-            <p>Subtotal: ₦{totalPrice.toLocaleString()}</p>
+            <p>Subtotal: ₦{totalPrice.toLocaleString()} <span>${totaldollar}</span></p>
             <button className="checkout-btn" onClick={() => navigate("/checkout")}>
               Proceed to Checkout
             </button>

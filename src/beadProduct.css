@@ -10,7 +10,6 @@
 /* Product container */
 .product-container {
   display: flex;
-  flex-wrap: wrap;
   max-width: 1100px;
   width: 100%;
   background: #fff;
@@ -171,8 +170,8 @@
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .product-container {
-    flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   .product-image, .product-details {

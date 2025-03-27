@@ -1,14 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import bead13 from "../assets/bead13.jpg"
-import bead20 from "../assets/bead20.jpg"
-import bead16 from "../assets/bead16.jpg"
+import beads21 from "../assets/beads21.jpeg"
+import bead22 from "../assets/bead22.jpeg"
+import beads22 from "../assets/beads22.jpeg"
+import bead23 from "../assets/bead23.jpeg"
+import beads23 from "../assets/beads23.jpeg"
+import bead21 from "../assets/bead21.jpeg"
+import beadss21 from "../assets/beadss21.jpeg"
+import bead26 from "../assets/bead26.jpeg"
 
 const products = [
-  { id: 1, name: "Beaded Bracelet", description: "Handcrafted natural bead bracelet.", price: 29999, image: bead13 },
-  { id: 4, name: "Wooden Necklace", description: "Elegant wooden bead necklace.", price: 49999, image: bead16 },
-  { id: 3, name: "Gemstone Ring", description: "Stylish ring with natural gemstones.", price: 19999, image: bead20 },
-  { id: 5, name: "Gemstone ", description: "Stylish ring with natural gemstones.", price: 59999, image: bead20 },
+  { id: 1, name: "Fads Beaded Bag", description: " Main body consists of acrylic beads ,handle purely made with pure crystal gems stones only.",
+     price: 85000, dollar:85, images:[bead21, beads21, beadss21] },
+  { id: 4, name: "Wooden Necklace", description: "A round circular beaded bag which is made with crystals acrylic beads for both front and back panel and pearl beads by the side ,a beauty’ that comes with a wooden bamboo handle",
+     price: 70000, dollar:70, images:[beads22, bead22]},
+  { id: 3, name: "DEM’s Beaded Bag", description: "Semi Circle two colour Beaded bag embedded with tiny crystal to finish its look", 
+    price: 65000, dollar:65, images: [bead23, beads23] },
+  { id: 5, name: "Hermes beaded bag", description: "Hermes beaded bag made purely with plastic acrylic beads and pure crystal gem stones ,embedded with the Hermes lock accessories Comes with original detachable chains ", 
+    price: 165000, dollar:165, images: [bead26] },
 ];
 
 const Product = () => {
@@ -37,17 +46,15 @@ const Product = () => {
       <div className="product-grid">
         {products.map((product) => (
           <div key={product.id} className="product-card">
-            <img src={product.image} alt={product.name} onClick={() => navigate("/bead", { state: { product } })} />
+            <img src={Array.isArray(product.images) ? product.images[0] : product.images} alt={product.name} onClick={() => navigate("/bead", { state: { product } })} />
             <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            <p className="price">₦{product.price.toLocaleString()}</p>
+            <p className="price">₦{product.price.toLocaleString()} 
+            <span>(${product.dollar})</span></p>
             <button onClick={() => addToCart(product)}>Add to cart</button>
           </div>
         ))}
       </div>
-      <button className="view-cart-btn" onClick={() => navigate("/cart")}>
-        View Cart
-      </button>
+    
     </div>
   );
 };
