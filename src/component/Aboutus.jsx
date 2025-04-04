@@ -18,14 +18,14 @@ const Aboutus = () => {
             <div className="about-text">
                 <h2>hey! you found me <span>😊</span></h2>
                 <p>
-                    Everthingbytewa is a brand that was born in my mother’s dining room. Every night,
-                    I would sit there with a little torch, hunched over, fully immersed in my creativity as I brought
-                    another piece of beaded jewelry to life—each one inspired by something special.
+                TEWATHEBEADMAKER is An African born brand where Handmade bags are made to be unique, 
+                and impossible to ignore—that’s what my beaded bags are all about. I design one-of-a-kind 
+                statement pieces that blend craftsmanship with creativity, making sure you carry something
+                 that stands out. Every bead is carefully placed, every pattern is intentional, and every bag
+                  is made with love. If you love fashion that’s bold, 
+                artistic, and full of personality, you’re in the right place!”
                 </p>
-                <p>
-                    It all started as a little girl’s dream, but now I am proud to share it with you. 
-                    Thank you for being a part of this journey.
-                </p>
+               
                 <p className="about-name">Ojuolape Oluwafunmilayo Tobiloba</p>
                 <p className="about-role">CEO, Director</p>
             </div>

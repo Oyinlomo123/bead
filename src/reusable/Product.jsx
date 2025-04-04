@@ -20,6 +20,8 @@ const products = [
     price: 165000, dollar:165, images: [bead26] },
 ];
 
+
+
 const Product = () => {
   const [cart, setCart] = useState([]);
   const navigate = useNavigate();
@@ -46,10 +48,10 @@ const Product = () => {
       <div className="product-grid">
         {products.map((product) => (
           <div key={product.id} className="product-card">
-            <img src={Array.isArray(product.images) ? product.images[0] : product.images} alt={product.name} onClick={() => navigate("/bead", { state: { product } })} />
+             <img src={product.images?.[0]} alt={product.name} />
             <h3>{product.name}</h3>
             <p className="price">₦{product.price.toLocaleString()} 
-            <span>(${product.dollar})</span></p>
+                <span>(${product.dollar})</span></p>
             <button onClick={() => addToCart(product)}>Add to cart</button>
           </div>
         ))}

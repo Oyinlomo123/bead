@@ -26,8 +26,7 @@ const Cart = () => {
 
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
   
-  const totaldollar = cart.reduce((total, item) => total + item.dollar * item.quantity, 0);
-
+  
   return (
     <div className="cart-container">
       <h2 className="cart-title">Cart</h2>
@@ -47,10 +46,10 @@ const Cart = () => {
               {cart.map((item) => (
                 <tr key={item.id}>
                   <td className="cart-product">
-                    <img src={item.images} alt={item.name} />
+                  <img src={item.images?.[0]} alt={item.name} />
                     <div>
                       <p className="product-name">{item.name}</p>
-                      <p className="product-price">₦{item.price.toLocaleString()}<span>$({item.dollar})</span></p>
+                      <p className="product-price">₦{item.price.toLocaleString()}</p>
 
                     </div>
                   </td>
@@ -70,7 +69,7 @@ const Cart = () => {
 
           <div className="cart-summary">
             <h3>Cart Totals</h3>
-            <p>Subtotal: ₦{totalPrice.toLocaleString()} <span>${totaldollar}</span></p>
+            <p>Subtotal: ₦{totalPrice.toLocaleString()}</p>
             <button className="checkout-btn" onClick={() => navigate("/checkout")}>
               Proceed to Checkout
             </button>
